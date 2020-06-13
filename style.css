@@ -1,0 +1,23 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  overflow-x: hidden;
+}
+.container {
+  width: 100vw;
+  height: 100vh;
+  position: relative;
+  background-image: linear-gradient(to top, #fad0c4 0%, #ffd1ff 100%);
+}
+
+img.plane {
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 9;
+}
