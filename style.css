@@ -4,7 +4,7 @@
   box-sizing: border-box;
 }
 body {
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 .container {
   width: 100vw;
@@ -46,4 +46,18 @@ img.cloud {
 .cloud-5 {
   top: 10%;
   left: 125%;
+}
+
+img.celestial {
+  width: 150px;
+  height: 150px;
+  position: absolute;
+  top: 0%;
+  left: 0%;
+  z-index: -1;
+}
+img.moon {
+  top: 30%;
+  left: 0;
+  opacity: 0;
 }

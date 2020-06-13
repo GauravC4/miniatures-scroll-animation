@@ -2,19 +2,6 @@ gsap.registerPlugin(MotionPathPlugin);
 gsap.registerPlugin(ScrollTrigger);
 
 var flightPath = {
-  // path: [
-  //   { x: 100, y: -30 },
-  //   { x: 300, y: 10 },
-  //   { x: 500, y: 100 },
-  //   { x: 750, y: -200 },
-  //   { x: 600, y: -300 },
-  //   { x: 500, y: -200 },
-  //   { x: 500, y: -100 },
-  //   { x: 600, y: 0 },
-  //   { x: 700, y: -50 },
-  //   { x: 800, y: -100 },
-  //   { x: window.innerWidth, y: -300 },
-  // ],
   path: [
     { x: 100, y: 0 },
     { x: 200, y: 50 },
@@ -51,6 +38,34 @@ tl.to(
   },
   0
 );
+tl.to(
+  ".moon",
+  {
+    motionPath: {
+      path: [
+        { x: 100, y: 50 },
+        { x: 500, y: -200 },
+      ],
+      curviness: 0.5,
+    },
+    opacity: 1,
+  },
+  0
+);
+tl.to(
+  ".sun",
+  {
+    motionPath: {
+      path: [
+        { x: 100, y: 50 },
+        { x: 500, y: -200 },
+      ],
+      curviness: 0.5,
+    },
+    opacity: 0,
+  },
+  0
+);
 
 ScrollTrigger.create({
   animation: tl,
@@ -60,26 +75,3 @@ ScrollTrigger.create({
   scrub: 1,
   pin: true,
 });
-
-// clouds
-// var tl_cloud = gsap.timeline({ duration: 2, ease: "power1.inOut" });
-// tl_cloud.to(".cloud", {
-//   motionPath: {
-//     path: [
-//       { x: -100, y: -50 },
-//       { x: -300, y: -100 },
-//       { x: -500, y: 100 },
-//       { x: -700, y: 50 },
-//     ],
-//     curviness: 0.5,
-//   },
-// });
-
-// ScrollTrigger.create({
-//   animation: tl_cloud,
-//   trigger: ".container",
-//   start: "top top",
-//   end: "bottom top",
-//   scrub: 1,
-//   pin: true,
-// });
