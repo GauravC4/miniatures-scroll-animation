@@ -26,6 +26,20 @@ tl.to(
   { backgroundImage: "linear-gradient(to top, #30cfd0 0%, #330867 100%)" },
   0
 );
+tl.to(
+  ".cloud",
+  {
+    motionPath: {
+      path: [
+        { x: -200, y: -50 },
+        { x: -400, y: -100 },
+        { x: -600, y: 100 },
+      ],
+      curviness: 0.5,
+    },
+  },
+  0
+);
 
 ScrollTrigger.create({
   animation: tl,
@@ -35,3 +49,26 @@ ScrollTrigger.create({
   scrub: 1,
   pin: true,
 });
+
+// clouds
+// var tl_cloud = gsap.timeline({ duration: 2, ease: "power1.inOut" });
+// tl_cloud.to(".cloud", {
+//   motionPath: {
+//     path: [
+//       { x: -100, y: -50 },
+//       { x: -300, y: -100 },
+//       { x: -500, y: 100 },
+//       { x: -700, y: 50 },
+//     ],
+//     curviness: 0.5,
+//   },
+// });
+
+// ScrollTrigger.create({
+//   animation: tl_cloud,
+//   trigger: ".container",
+//   start: "top top",
+//   end: "bottom top",
+//   scrub: 1,
+//   pin: true,
+// });
