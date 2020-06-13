@@ -19,12 +19,13 @@ var flightPath = {
   autoRotate: true,
 };
 
-var tl = gsap.timeline();
-tl.to(".plane", {
-  motionPath: flightPath,
-  duration: 5,
-  ease: "power1.inOut",
-});
+var tl = gsap.timeline({ duration: 5, ease: "power1.inOut" });
+tl.to(".plane", { motionPath: flightPath }, 0);
+tl.to(
+  ".container",
+  { backgroundImage: "linear-gradient(to top, #30cfd0 0%, #330867 100%)" },
+  0
+);
 
 ScrollTrigger.create({
   animation: tl,
