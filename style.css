@@ -61,3 +61,11 @@ img.moon {
   left: 0;
   opacity: 0;
 }
+img.star {
+  width: 100px;
+  height: 100px;
+  top: 5%;
+  left: 80%;
+  transform: scale(0);
+  opacity: 0;
+}

@@ -66,6 +66,7 @@ tl.to(
   },
   0
 );
+tl.to(".star", { scale: 1, opacity: 1 }, 0);
 
 ScrollTrigger.create({
   animation: tl,
