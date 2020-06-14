@@ -44,7 +44,7 @@ tl.to(
     motionPath: {
       path: [
         { x: 100, y: 50 },
-        { x: 500, y: -200 },
+        { x: 500, y: -300 },
       ],
       curviness: 0.5,
     },
@@ -67,6 +67,7 @@ tl.to(
   0
 );
 tl.to(".star", { scale: 1, opacity: 1 }, 0);
+tl.to(".helper", { duration: 0.3, opacity: 0 }, "-=0.3");
 
 ScrollTrigger.create({
   animation: tl,
@@ -75,4 +76,12 @@ ScrollTrigger.create({
   end: "bottom top",
   scrub: 1,
   pin: true,
+});
+
+gsap.to(".arrow", {
+  y: 15,
+  duration: 1,
+  ease: "elastic",
+  yoyo: true,
+  repeat: -1,
 });
